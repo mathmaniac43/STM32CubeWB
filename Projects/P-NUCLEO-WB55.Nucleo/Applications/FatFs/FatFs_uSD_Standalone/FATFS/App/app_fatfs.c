@@ -7,11 +7,11 @@
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; Copyright (c) 2019 STMicroelectronics. 
+  * <h2><center>&copy; Copyright (c) 2019 STMicroelectronics.
   * All rights reserved.</center></h2>
   *
   * This software component is licensed by ST under BSD 3-Clause license,
-  * the "License"; You may not use this file except in compliance with the 
+  * the "License"; You may not use this file except in compliance with the
   * License. You may obtain a copy of the License at:
   *                        opensource.org/licenses/BSD-3-Clause
   *
@@ -39,7 +39,7 @@ typedef enum {
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define FATFS_MKFS_ALLOWED 1
+#define FATFS_MKFS_ALLOWED 0
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -64,9 +64,9 @@ static int32_t FS_FileOperations(void);
 /**
   * @brief  FatFs initialization
   * @param  None
-  * @retval Initialization result 
+  * @retval Initialization result
   */
-int32_t MX_FATFS_Init(void) 
+int32_t MX_FATFS_Init(void)
 {
   /*## FatFS: Link the disk I/O driver(s)  ###########################*/
   if (FATFS_LinkDriver(&SD_Driver, SDPath) != 0)
@@ -85,12 +85,12 @@ int32_t MX_FATFS_Init(void)
 /**
   * @brief  FatFs application main process
   * @param  None
-  * @retval Process result 
+  * @retval Process result
   */
 int32_t MX_FATFS_Process(void)
 {
   /* USER CODE BEGIN FATFS_Process */
-  int32_t process_res = APP_OK;  
+  int32_t process_res = APP_OK;
   /* Mass Storage Application State Machine */
   switch(Appli_state)
   {
@@ -112,7 +112,7 @@ int32_t MX_FATFS_Process(void)
     else
     {
     process_res = APP_ERROR;
-      
+
     }
 
     break;
@@ -127,7 +127,7 @@ int32_t MX_FATFS_Process(void)
   }
   return process_res;
   /* USER CODE END FATFS_Process */
-}  
+}
 
 /**
   * @brief  Gets Time from RTC (generated when FS_NORTC==0; see ff.c)
@@ -138,14 +138,14 @@ DWORD get_fattime(void)
 {
   /* USER CODE BEGIN get_fattime */
   return 0;
-  /* USER CODE END get_fattime */  
+  /* USER CODE END get_fattime */
 }
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN Application */
 /**
   * @brief File system : file operation
-  * @retval File operation result 
+  * @retval File operation result
   */
 static int32_t FS_FileOperations(void)
 {

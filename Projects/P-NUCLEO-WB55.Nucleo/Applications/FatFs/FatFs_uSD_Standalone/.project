@@ -105,12 +105,12 @@
 		<link>
 			<name>Drivers/STM32WBxx_HAL_Driver/stm32wbxx_hal_spi.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_spi.c</locationURI>
+			<locationURI>$%7BPARENT-8-PROJECT_LOC%7D/STM32Cube/Repository/STM32Cube_FW_WB_V1.3.0/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_spi.c</locationURI>
 		</link>
 		<link>
 			<name>Drivers/STM32WBxx_HAL_Driver/stm32wbxx_hal_spi_ex.c</name>
 			<type>1</type>
-			<locationURI>$%7BPARENT-8-PROJECT_LOC%7D/STM32Cube/Repository/STM32Cube_FW_WB_V1.3.0/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_spi_ex.c</locationURI>
+			<locationURI>$%7BPARENT-5-PROJECT_LOC%7D/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_spi_ex.c</locationURI>
 		</link>
 		<link>
 			<name>Drivers/STM32WBxx_HAL_Driver/stm32wbxx_hal_tim.c</name>

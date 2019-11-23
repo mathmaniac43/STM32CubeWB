@@ -1,5 +1,5 @@
 Drivers/STM32WBxx_HAL_Driver/stm32wbxx_hal_spi_ex.o: \
- C:/Users/Nick/STM32Cube/Repository/STM32Cube_FW_WB_V1.3.0/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_spi_ex.c \
+ C:/Users/Nick/pnl/repos/STM32CubeWB/Drivers/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_spi_ex.c \
  C:/Users/Nick/STM32Cube/Repository/STM32Cube_FW_WB_V1.3.0/Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal.h \
  C:/Users/Nick/pnl/repos/STM32CubeWB/Projects/P-NUCLEO-WB55.Nucleo/Applications/FatFs/FatFs_uSD_Standalone/Core/Inc/stm32wbxx_hal_conf.h \
  C:/Users/Nick/STM32Cube/Repository/STM32Cube_FW_WB_V1.3.0/Drivers/STM32WBxx_HAL_Driver/Inc/stm32wbxx_hal_dma.h \

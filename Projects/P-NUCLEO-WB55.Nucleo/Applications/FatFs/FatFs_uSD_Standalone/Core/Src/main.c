@@ -26,7 +26,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "ff.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -116,12 +116,31 @@ int main(void)
     if (ProcessStatus == APP_ERROR)
     {
       Error_Handler();
+      continue;
     }
     else
     {
       BSP_LED_Off(LED_ERROR);
       BSP_LED_On(LED_OK);
     }
+    ProcessStatus = MX_FATFS_Process();
+
+    uint8_t card_state = BSP_SD_GetCardState();
+    if (BSP_SD_OK != card_state)
+    {
+      Error_Handler();
+      continue;
+    }
+
+    FIL f;
+    FRESULT result_open = f_open(&f, "pnl.txt", FA_READ);
+    if (FR_OK != result_open)
+    {
+    	Error_Handler();
+    	continue;
+    }
+
+    f_close(&f);
 
     /* USER CODE END WHILE */
 
